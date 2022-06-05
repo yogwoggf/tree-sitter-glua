@@ -1,8 +1,8 @@
-# tree-sitter-lua
+# tree-sitter-glua
 
 [![build status](https://github.com/Azganoth/tree-sitter-lua/actions/workflows/ci.yml/badge.svg)](https://github.com/Azganoth/tree-sitter-lua/actions/workflows/ci.yml)
 
-Lua grammar for tree-sitter.
+GLua grammar for tree-sitter.
 
 For Rust usage see the [crate README][rust readme].
 
