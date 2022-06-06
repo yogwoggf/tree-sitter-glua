@@ -1,5 +1,5 @@
 {
-  "name": "tree-sitter-lua",
+  "name": "tree-sitter-glua",
   "version": "1.6.2",
   "description": "Lua grammar for tree-sitter.",
   "main": "bindings/node",
@@ -8,7 +8,7 @@
     "parser",
     "lua"
   ],
-  "repository": "https://github.com/Azganoth/tree-sitter-lua",
+  "repository": "https://github.com/yogwoggf/tree-sitter-glua",
   "author": "Ademir José Ferreira Júnior <ademirj.ferreirajunior@gmail.com> (https://github.com/Azganoth)",
   "license": "MIT",
   "scripts": {

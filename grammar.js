@@ -19,7 +19,7 @@ const PREC = {
 const commaSeq = (rule) => seq(rule, repeat(seq(",", rule)));
 
 module.exports = grammar({
-  name: "lua",
+  name: "glua",
 
   rules: {
     program: ($) => seq(repeat($._statement), optional($.return_statement)),

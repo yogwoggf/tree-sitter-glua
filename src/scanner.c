@@ -21,23 +21,23 @@ static void skip(TSLexer *lexer)
 }
 
 // scanner
-void *tree_sitter_lua_external_scanner_create()
+void *tree_sitter_glua_external_scanner_create()
 {
   return NULL;
 }
 
-void tree_sitter_lua_external_scanner_destroy(void *payload)
+void tree_sitter_glua_external_scanner_destroy(void *payload)
 {
 }
 
-unsigned tree_sitter_lua_external_scanner_serialize(
+unsigned tree_sitter_glua_external_scanner_serialize(
     void *payload,
     char *buffer)
 {
   return 0;
 }
 
-void tree_sitter_lua_external_scanner_deserialize(
+void tree_sitter_glua_external_scanner_deserialize(
     void *payload,
     const char *buffer,
     unsigned length)
@@ -49,7 +49,7 @@ static bool is_not_new_line_or_eof(TSLexer *lexer)
   return lexer->lookahead != '\n' && lexer->lookahead != EOF;
 }
 
-bool tree_sitter_lua_external_scanner_scan(
+bool tree_sitter_glua_external_scanner_scan(
     void *payload,
     TSLexer *lexer,
     const bool *valid_symbols)
