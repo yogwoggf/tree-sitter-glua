@@ -1,11 +1,11 @@
 use tree_sitter::Language;
 
 extern "C" {
-    fn tree_sitter_lua() -> Language;
+    fn tree_sitter_glua() -> Language;
 }
 
 pub fn language() -> Language {
-    unsafe { tree_sitter_lua() }
+    unsafe { tree_sitter_glua() }
 }
 
 pub const NODE_TYPES: &'static str = include_str!("../../src/node-types.json");

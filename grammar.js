@@ -304,11 +304,14 @@ module.exports = grammar({
         ...[
           ["or", PREC.OR],
           ["and", PREC.AND],
+          ["||", PREC.OR],
+          ["&&", PREC.AND],
           ["<", PREC.COMPARE],
           ["<=", PREC.COMPARE],
           ["==", PREC.COMPARE],
           ["~=", PREC.COMPARE],
           [">=", PREC.COMPARE],
+          ["!=", PREC.COMPARE],
           [">", PREC.COMPARE],
           ["|", PREC.BIT_OR],
           ["~", PREC.BIT_NOT],
@@ -318,8 +321,7 @@ module.exports = grammar({
           ["+", PREC.PLUS],
           ["-", PREC.PLUS],
           ["*", PREC.MULTI],
-          ["/", PREC.MULTI],
-          ["//", PREC.MULTI],
+          ["/", PREC.PLUS],
           ["%", PREC.MULTI],
         ].map(([operator, precedence]) =>
           prec.left(precedence, seq($._expression, operator, $._expression)),
@@ -333,7 +335,10 @@ module.exports = grammar({
       ),
 
     unary_operation: ($) =>
-      prec.left(PREC.UNARY, seq(choice("not", "#", "-", "~"), $._expression)),
+      prec.left(
+        PREC.UNARY,
+        seq(choice("!", "not", "#", "-", "~"), $._expression),
+      ),
 
     // Expressions: Primitives
     string: ($) =>

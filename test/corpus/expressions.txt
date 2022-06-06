@@ -130,14 +130,14 @@ c = i * 2 ^ j
       (binary_operation (number) (identifier)))))
 
 ============================================
-Unary operations
+Unary GLua operations
 ============================================
 
 food_table_size = #food
 
 negative_value = -value
 
-tern_bool = not condition and true or false
+tern_bool = !condition && true || false
 
 ---
 

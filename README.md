@@ -3,6 +3,8 @@
 [![build status](https://github.com/Azganoth/tree-sitter-lua/actions/workflows/ci.yml/badge.svg)](https://github.com/Azganoth/tree-sitter-lua/actions/workflows/ci.yml)
 
 GLua grammar for tree-sitter.
+Experimental, also comments are not handled because I almost had an aneurysm while attempting to make a grammar rule for comments.
+Just use.. a preprocessor to change "//" to "--" and etc
 
 For Rust usage see the [crate README][rust readme].
 
